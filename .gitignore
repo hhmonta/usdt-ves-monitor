@@ -33,6 +33,10 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# database
+db/*.db
+db/*.db-journal
+
 # vercel
 .vercel
 
@@ -50,5 +54,15 @@ test
 prompt
 
 server.log
+
 # Skills directory
 /skills/
+
+# Scripts and internal files
+.zscripts/
+.z-ai-config/
+.claude/
+agent-ctx/
+worklog.md
+examples/
+download/
