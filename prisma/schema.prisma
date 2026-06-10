@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model PriceSnapshot {
+  id         String   @id @default(cuid())
+  exchange   String
+  ask        Float
+  totalAsk   Float
+  bid        Float
+  totalBid   Float
+  recordedAt DateTime @default(now())
+}
+
+model BestPrice {
+  id          String   @id @default(cuid())
+  bestAsk     Float
+  bestAskEx   String
+  bestBid     Float
+  bestBidEx   String
+  avgAsk      Float
+  avgBid      Float
+  recordedAt  DateTime @default(now())
+}
